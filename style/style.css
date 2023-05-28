@@ -1,24 +1,8 @@
 /* Global styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 16px;
-  background-color: #0c0d0f;
-  color: #fff;
-}
-
-a {
-  color: #fff;
-  transition: all 0.3s ease;
-}
-
-a:hover {
-  color: #d90429;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background-color: black;
 }
 
 /* Header styles */
@@ -26,9 +10,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 60px;
-  padding: 0 2rem;
-  background-color: #1b1d20;
+  padding: 20px 30px;
+  background-color: #1C1C1C;
 }
 
 header img {
@@ -38,129 +21,134 @@ header img {
 header button {
   border: none;
   background-color: transparent;
-  cursor: pointer;
+}
+
+header button img {
+  height: 20px;
+  filter: invert();
 }
 
 /* Main styles */
 .main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+main img {
+  width: 57%;
+  border-radius: 5px;
+}
+
+main h1, main p {
+  margin: 0;
+  font-size: medium;
+  color: white;
+}
+
+section.text h2 {
+  margin: 20px 0;
+  font-size: 36px;
+  color: white;
+}
+
+section.section1 li {
+  list-style-type: none;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  min-height: calc(100vh - 60px);
-  padding: 2rem;
-}
-
-.main h1 {
-  font-size: 3rem;
-  margin-bottom: 2rem;
-}
-
-.main p {
-  font-size: 1.2rem;
-  line-height: 2;
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.section1 {
-  list-style: none;
-  width: 100%;
-  margin: 4rem 0;
-}
-
-.section1 li {
-  display: flex;
   justify-content: space-between;
-  align-items: center;
-  background-color: #1b1d20;
-  border-radius: 10px;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  transition: all 0.3s ease;
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #2C2C2C;
 }
 
-.section1 li:hover {
-  background-color: #2d3036;
-}
-
-.section1 li p {
-  margin: 0 1rem;
-}
-
-.section1 li .play-button {
-  width: 30px;
-  height: 30px;
-}
-
-.section1 li .play-button button {
-  border: none;
-  background-color: transparent;
+section.section1 li:hover {
   cursor: pointer;
+  background-color: #4C4C4C;
 }
 
-.section1 li .play-button button img {
-  width: 100%;
+section.section1 li p {
+  margin: 0;
+  font-size: 24px;
+}
+
+section.section1 li .play-button img {
+  margin-left: 10px;
+  max-width: 50%;
+  height: auto;
+  filter: invert();
 }
 
 /* Footer styles */
 footer {
+  background-color: #1C1C1C;
+  padding: 20px;
+  color: #FFFFFF;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  height: 60px;
-  background-color: #1b1d20;
 }
 
-.footer-text {
-  font-size: 1.2rem;
+section.section2 {
+  display: flex;
+  align-items: center;
+}
+
+section.section2 button {
+  border: none;
+  background-color: transparent;
+  margin-right: 10px;
+}
+
+section.section2 button img {
+  height: 30px;
+  filter: invert();
+}
+
+.footer-text h2 {
+  margin: 0;
 }
 
 .footer-text a {
+  color: #FFFFFF;
   text-decoration: none;
-  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
 }
 
-/* Buttons styles */
-.buttons {
-  margin: 1rem 0;
+.section3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  flex-direction: column;
+  right: 0;
+  gap: 1rem;
+  background-color: #1C1C1C;
+  padding: 5px;
 }
 
-.section2 button {
+.section3 button {
   border: none;
   background-color: transparent;
-  cursor: pointer;
-  margin-right: 1rem;
 }
 
-.section2 button img {
-  width: 30px;
-  height: 30px;
+.section3 img {
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
-@media (max-width: 768px) {
-  .main h1 {
-    font-size: 2rem;
-  }
-  
-  .main p {
-    font-size: 1rem;
-  }
-  
-  .section1 li {
-    padding: 0.5rem;
-  }
-  
-  .section1 li p {
-    display: none;
-  }
-  
-  .section1 li .play-button {
-    margin-left: auto;
-  }
-  
-  .footer-text {
-    font-size: 1rem;
-  }
+.albums picture {
+  display: flex;
+  flex-direction:row;
+  justify-content: space-between;
+  overflow-x: auto;
+  scrollbar-width: none;
+  position: absolute;
+}
+
+.albums {
+  width: 100%;
+  overflow: hidden;
 }
